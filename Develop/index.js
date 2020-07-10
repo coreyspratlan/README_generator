@@ -75,54 +75,54 @@ const questions = [
 
 inquirer.prompt(questions).then(response => {
 
-    fs.appendFileSync("README.md", + response.title) + '\n', function (err) {
+    fs.writeFile("README.md", + response.title) + '\n', function (err) {
         if (err) {
             console.log(err);
         }
     }
 
-    fs.appendFileSync("README_generator", + response.description) + '\n', function (err) {
+    fs.writeFile("README.md", + response.description) + '\n', function (err) {
         if (err) {
             console.log(err);
         } 
     } 
-    fs.appendFileSync("README_generator", + response.installation) + '\n', function (err) {
+    fs.writeFile("README.md", + response.installation) + '\n', function (err) {
         if (err) {
             console.log(err);
         } 
     }  
-    fs.appendFileSync("README_generator", + response.usage) + '\n', function (err) {
+    fs.writeFile("README.md", + response.usage) + '\n', function (err) {
         if (err) {
             console.log(err);
         } 
     }
-    fs.appendFileSync("README_generator", + response.license) + '\n', function (err) {
+    fs.writeFile("README.md", + response.license) + '\n', function (err) {
         if (err) {
             console.log(err);
         } 
     }
-    fs.appendFileSync("README_generator", + response.contribution) + '\n', function (err) {
+    fs.writeFile("README.md", + response.contribution) + '\n', function (err) {
         if (err) {
             console.log(err);
         } 
     }
-    fs.appendFileSync("README_generator", + response.test) + '\n', function (err) {
+    fs.writeFile("README.md", + response.test) + '\n', function (err) {
         if (err) {
             console.log(err);
         } 
     }
-    fs.appendFileSync("README_generator", + response.github) + '\n', function (err) {
+    fs.writeFile("README.md", + response.github) + '\n', function (err) {
         if (err) {
             console.log(err);
         } 
     }
-    fs.appendFileSync("README_generator", + response.email) + '\n', function (err) {
+    fs.writeFile("README.md", + response.email) + '\n', function (err) {
         if (err) {
             console.log(err);
         } 
     }
             
-  })  
+  }) 
     
     
     // array of questions for user
@@ -131,8 +131,8 @@ inquirer.prompt(questions).then(response => {
             // ];
 
             // function to write README file
-            function writeToFile(fileName, data) {
-            }
+            // function writeToFile(fileName, data) {
+            // }
 
             // function to initialize program
             function init() {
